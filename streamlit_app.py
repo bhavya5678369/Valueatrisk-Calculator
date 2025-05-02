@@ -76,7 +76,7 @@ with st.sidebar:
     linkedin_url = "https://www.linkedin.com/in/bhavyasanghvi/"
     st.markdown(f'<a href="{linkedin_url}" target="_blank" style="text-decoration: none; color: inherit;"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="25" height="25" style="vertical-align: middle; margin-right: 10px;">`Bhavya Sanghvi`</a>', unsafe_allow_html=True)
 
-    tickers = st.text_input('Enter tickers separated by space', 'AAPL MSFT GOOG').split()
+    tickers = st.text_input('Enter tickers separated by space', 'AAPL').split()
     start_date = st.date_input('Start date', value=pd.to_datetime('2020-01-01'))
     end_date = st.date_input('End date', value=pd.to_datetime('today'))
     rolling_window = st.slider('Rolling window', min_value=1, max_value=252, value=20)
